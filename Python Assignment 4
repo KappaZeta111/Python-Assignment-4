@@ -1,0 +1,65 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 10 20:00:04 2018
+
+@author: jofadamiro
+"""
+
+
+import re
+
+
+value = True
+
+
+while value:
+
+    
+    password= input("Enter your password: ")
+
+  
+    reTypedPassword= input("Re-enter your password: ")
+
+        
+    print(password==reTypedPassword)
+
+       
+    if password != reTypedPassword:
+
+               
+        print("That password didn't have the required properties")
+
+        
+    elif (len(password)<8):
+
+                
+        value=True
+
+        
+    elif not re.search("[a-z]",password):
+
+               
+        value=True
+
+      
+    elif not re.search("[0-9]",password):
+
+               
+        value=True
+
+        
+    elif not re.search("[A-Z]",password):
+
+                
+        value=True
+
+        
+    else:
+
+            
+        print("Valid Password")
+
+              
+        value=False
+      
+    break
